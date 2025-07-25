@@ -45,8 +45,8 @@ if __name__ == "__main__":
         direction[2] = 0
         norm = np.linalg.norm(direction)
 
-        # ゆっくり移動（速度係数 0.5）
-        velocity = (direction / norm * 0.5).tolist() if norm > 1e-3 else [0, 0, 0]
+        # ゆっくり移動（速度係数 0.2）
+        velocity = (direction / norm * 0.2).tolist() if norm > 1e-3 else [0, 0, 0]
 
         p.resetBaseVelocity(car, linearVelocity=velocity)
         p.stepSimulation()
